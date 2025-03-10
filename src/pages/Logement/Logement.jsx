@@ -59,7 +59,11 @@ const Logement = () => {
         <article className='articleContainer2'>
                 {details.host &&
                 <div className='avatar'>
-                    <h2 className='name'>{details.host.name}</h2>
+                    <h2 className='name'>
+                        {details.host.name.split(' ').map(name => (
+                            <span key={name}>{name}</span>
+                        ))}
+                    </h2>
                 <figure className='figure'>
                     <img src={details.host.picture} alt={details.host.name} className='figure_image' />
                 </figure>
