@@ -151,8 +151,9 @@ footer {
   flex-direction: column;
   gap: 1rem;
 
-  h2 {
+  .title {
     color: #ff6060;
+    margin-top: 24px;
   }
 
   .location {
@@ -193,16 +194,15 @@ footer {
 
   .avatar {
     display: flex;
+    justify-content: center;
     align-items: center;
 
-    h2 {
+    .name {
       color: #ff6060;
+      font-size: 20px;
     }
 
     .figure {
-      background-color: #b8b3b3;
-      width: 64px;
-      height: 64px;
       border-radius: 50%;
 
       img {
