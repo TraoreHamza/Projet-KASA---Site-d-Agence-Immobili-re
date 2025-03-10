@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router';
 
-
+import './notFound.css'
 
 const D_404 = () => {
     return (

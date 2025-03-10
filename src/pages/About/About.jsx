@@ -1,6 +1,7 @@
 
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
+import './about.css'
 const D_A_Propos = () => {
     return (
         <>
@@ -10,8 +11,8 @@ const D_A_Propos = () => {
             </figure>
             <nav>
             <ul>
-                <Link to={"/"} className='active'><li>Acceuil</li></Link>
-                <Link to={"/a_propos/"}><li>A Propos</li></Link>
+                <NavLink to={"/"}><li>Acceuil</li></NavLink>
+                <NavLink to={"/a_propos/"}><li>A Propos</li></NavLink>
             </ul>
             </nav>
         </header>

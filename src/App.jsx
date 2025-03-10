@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route} from 'react-router';
-import Home from './pages/Home';
-import Logement from './pages/Logement';
-import D_404 from './pages/D_404';
-import D_A_Propos from './pages/D_A_Propos';
+import Home from './pages/Home/Home';
+import Logement from './pages/Logement/Logement';
+import D_404 from './pages/NatFound/NotFound';
+import D_A_Propos from './pages/About/About';
 
 import './assets/styles.css'
 

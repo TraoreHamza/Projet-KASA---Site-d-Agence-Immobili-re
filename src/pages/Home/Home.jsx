@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router';
-import PropertyCard from '../components/PropertyCard'
+import PropertyCard from '../../components/PropertyCard'
 
+import './home.css'
 const Home = () => {
 
     const [logements, setLogements] = useState([]);

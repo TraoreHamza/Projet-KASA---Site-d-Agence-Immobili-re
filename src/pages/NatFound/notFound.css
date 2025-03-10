@@ -1,0 +1,25 @@
+/* D_404 */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+
+  .page_404 {
+    color: #ff6060;
+    font-size: 400px;
+  }
+
+  P {
+    font-size: 3rem;
+    margin-block: 2%;
+    color: #ff6060;
+  }
+
+  a {
+    color: #ff6060;
+    margin-block: 5%;
+  }
+}

@@ -1,0 +1,37 @@
+/* A PROPOS */
+
+.propos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .figure {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+
+    img {
+      width: 80%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 1rem;
+      filter: brightness(70%);
+    }
+  }
+
+  .divDetails {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    gap: 2rem;
+  }
+  .details {
+    background-color: #ff6060;
+    color: #fff;
+    width: 70%;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 0 auto;
+  }
+}

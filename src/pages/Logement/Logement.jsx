@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router';
 import { Link } from 'react-router';
 
-
+import './logement.css'
 
 
 const Logement = () => {
