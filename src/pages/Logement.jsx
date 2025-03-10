@@ -47,7 +47,7 @@ const Logement = () => {
         </div>
     <section className='logement'>
         <article className='articleContainer'>
-                <h2>{details.title}</h2>
+                <h2 className='title'>{details.title}</h2>
                 <p className='location'>{details.location}</p>
             <div>
                 {details.tags && details.tags.map(tags => (
@@ -59,9 +59,9 @@ const Logement = () => {
         <article className='articleContainer2'>
                 {details.host &&
                 <div className='avatar'>
-                    <h2>{details.host.name}</h2>
+                    <h2 className='name'>{details.host.name}</h2>
                 <figure className='figure'>
-                    <img src={details.host.picture} alt="l" className='figure_image' />
+                    <img src={details.host.picture} alt={details.host.name} className='figure_image' />
                 </figure>
                 </div>
                 }
