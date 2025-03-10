@@ -57,14 +57,14 @@ const Logement = () => {
                 <details className='details'><summary className='description'>Description<span></span></summary><p >{details.description}</p></details>
         </article>
         <article className='articleContainer2'>
+                {details.host &&
                 <div className='avatar'>
-                    
-                    {/* // l'errur de j'ai pour l'API de l'hôte */}
                     <h2>{details.host.name}</h2>
                 <figure className='figure'>
                     <img src={details.host.picture} alt="l" className='figure_image' />
                 </figure>
                 </div>
+                }
                     <span>★★★✩✩</span>
                     {/* <p>{details.rating}</p> */}
                 <details >
