@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router';
 import PropertyCard from '../../components/PropertyCard'
+import Banner from '../../components/Banner/Banner';
 
 import './home.css'
 const Home = () => {
@@ -37,8 +38,7 @@ const Home = () => {
         </header>
         <div>
             <figure className='image'>
-                <img src="./src/assets/Image_1.webp" alt="l" />
-                <h1 className='homeTitle'>Chez vous, partout et ailleurs</h1>
+                <Banner image="./src/assets/Image_1.webp" alt="code" text="Chez vous, partout et ailleurs" />
             </figure> 
         </div>    
         <div className="grid">
