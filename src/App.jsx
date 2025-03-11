@@ -5,6 +5,7 @@ import D_404 from './pages/NatFound/NotFound';
 import D_A_Propos from './pages/About/About';
 
 import './assets/styles.css'
+import './global.css'
 
 // Créer un composant App
 function App() {
