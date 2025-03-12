@@ -1,45 +1,22 @@
 
-import { Link, NavLink } from 'react-router';
+import './about.scss';
+import Banner from '../../components/Banner/Banner';
+import Accordion from '../../components/Accordion/Accordion';
 
-import './about.css'
-const D_A_Propos = () => {
+const About = () => {
     return (
         <>
-        <header>
-            <figure className='logo'>
-                <img src="../src/assets/LOGO.webp" alt="l" />
-            </figure>
-            <nav>
-            <ul>
-                <NavLink to={"/"}><li>Acceuil</li></NavLink>
-                <NavLink to={"/a_propos/"}><li>A Propos</li></NavLink>
-            </ul>
-            </nav>
-        </header>
-        <article className='propos'>
-        <div>
-            <figure className='figure'>
-                <img src="../src/assets/Image_2.webp" alt="l" />
-            </figure> 
-        </div> 
-            <div className='divDetails'>
-                <details><summary className='details'>Fiabilite</summary></details>
-                <details><summary className='details'>Respect</summary></details>
-                <details><summary className='details'>Service</summary></details>
-                <details><summary className='details'>Sécurité</summary></details>
+        <Banner image="/montagne.webp" alt="montagne" />
+        <div className='about'>
+            <div className="about__content">
+                <Accordion title="Fiabilité" content="lorem ispum" />
+                <Accordion title="Respect" content="lorem ispum" />
+                <Accordion title="Service" content="lorem ispum" />
+                <Accordion title="Sécurité" content="lorem ispum" />
             </div>
-        </article>
-        <footer>
-            <div>
-                <figure className='footer_fig'> 
-                    <img src="../src/assets/LOGO.webp" alt="logo" className='footer_fig--img'/>
-                </figure>
-                <p>2020 Kasa.All rights reserved</p>
-            </div>
-        </footer>
+        </div>
         </>
-    )
-}
+    );
+};
 
-
-export default D_A_Propos;
+export default About;
