@@ -4,7 +4,7 @@ import Accordion from "../../Components/Accordion/Accordion";
 import './logement.scss';
 
 const Logement = () => {
-    const { id } = useParams();
+    const { identifiant } = useParams();
     const [rental, setRental] = useState();
     const [sliderIndex, setSliderIndex] = useState(0);
     const [stars, setStars] = useState([
@@ -15,16 +15,9 @@ const Logement = () => {
     }, []);
 
     const fetchRental = async () => {
-        const response = await fetch("https://titi.startwin.fr/logements/" + id);
+        const response = await fetch("https://titi.startwin.fr/logements/" + identifiant);
         const data = await response.json();
-        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill
-        // La fonction fill permet de remplacer les elements d'un tableau par la valeur que l'on souhaite
-        // en partant de la position du tableau que l'on souhaite et pour le nombre d'element que l'on souhaite
-        // Donc ici, je remplace les valeurs "gray" par "orange" en partant du début du tableau
-        // et pour les x prochains elements, x etant data.rating, donc la note de la location
-        // Donc si j'ai 3 en note, j'aurai 3 oranges et 2 gris dans mon tableau
-        // Le fill() ne fonctionne que si il y a deja des valeurs à remplacer
-        // Sans valeurs, ne fill ne fonctionne pas
+
         setStars(stars.fill("orange", 0, data.rating))
         setRental(data);
     }
@@ -32,12 +25,6 @@ const Logement = () => {
     const prev = () => {
         // Si mon sliderIndex est 0 ou moins
         if (sliderIndex <= 0) {
-            // Alors je repart de la fin de mon tableau 
-            // Que je récupère en prenant le nombre d'element de mon tableau (.length)
-            // et en retirant 1, car on commence à compter de 0 et pas 1
-            // Sinon il va mettre en index 5 par exemple, car il y a 5 elements dans mon tableau
-            // Mais les elements sont 0=> 1=> 2=> 3=> 4=> (ce qui fait 5 elements)
-
             setSliderIndex(rental.pictures.length - 1);
         } else {
             // Sinon, je retire simplement 1 a mon index pour afficher l'image précédente
@@ -62,16 +49,6 @@ const Logement = () => {
     }
     return (
         <div className="rental">
-            {/* Pour afficher un diaporama : */}
-            {/* Mettre une div, avec une balise image a l'interieur*/}
-            {/* deux balises pour les fleches suivant et precedent */}
-            {/* Avoir un state index qui va nous permettre de parcourir notre tableau */}
-            {/* Le state index sera par defaut à 0 pour afficher la premiere image du tableau*/}
-            {/* L'image a afficher sera toujours rental.pictures[index] */}
-            {/* Appuyer sur la fleche suivant va incrementer l'index, et inversement pour la fleche precedent */}
-            {/* Si l'index dépasse le nombre d'element du tableau, alors elle reviens a 0 */}
-            {/* Si l'index est inferieur a 0, alors l'index repart de la fin du tableau */}
-            {/* Vous devez utiliser .length */}
             <div className="rental__slider">
                 <img className="arrow left" onClick={prev} src="/left.svg" alt="Fleche gauche" />
                 <img className="rental__slider-image" src={rental.pictures[sliderIndex]} alt={rental.title} />
